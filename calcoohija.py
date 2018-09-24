@@ -3,6 +3,7 @@
 
 import sys
 
+
 class Calculadora():
 
     def plus(self, op1, op2):
@@ -11,7 +12,8 @@ class Calculadora():
     def minus(self, op1, op2):
         return op1 - op2
 
-class CalculadoraHija(Calculadora)
+
+class CalculadoraHija(Calculadora):
 
     def times(self, op1, op2):
         return op1 * op2
@@ -19,7 +21,8 @@ class CalculadoraHija(Calculadora)
     def over(self, op1, op2):
         return op1 / op2
 
-calculator = CalculadoraHija(Calculadora)
+
+calculator = CalculadoraHija()
 
 if __name__ == "__main__":
     try:
@@ -32,13 +35,15 @@ if __name__ == "__main__":
         result = calculator.plus(operating1, operating2)
     elif sys.argv[2] == "resta":
         result = calculator.minus(operating1, operating2)
-    elif sys.argv[2] == "por":
+    elif sys.argv[2] == "multiplica":
         result = calculator.times(operating1, operating2)
-    elif sys.argv[2] == "entre":
+    elif sys.argv[2] == "divide":
         if operating2 == 0:
             sys.exit("Division by zero is not allowed")
-        else
+        else:
             result = calculator.over(operating1, operating2)
 
     else:
-        sys.exit('Operación solo puede ser sumar,restar, multiplicar y dividir.')
+        sys.exit('Operación solo puede ser sumar,restar,multiplicar,dividir.')
+
+    print(result)
