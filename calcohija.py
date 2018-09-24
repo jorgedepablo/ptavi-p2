@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-
+    
 class CalculadoraHija(Calculadora)
 
     def times(self, op1, op2):
