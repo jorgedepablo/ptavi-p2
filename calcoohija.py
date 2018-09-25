@@ -44,6 +44,6 @@ if __name__ == "__main__":
             result = calculator.over(operating1, operating2)
 
     else:
-        sys.exit('Operación solo puede ser sumar,restar,multiplicar,dividir.')
+        exit('Operación solo puede ser sumar,restar,multiplicar,dividir.')
 
     print(result)
