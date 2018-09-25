@@ -39,7 +39,7 @@ if __name__ == "__main__":
         result = calculator.times(operating1, operating2)
     elif sys.argv[2] == "divide":
         if operating2 == 0:
-            sys.exit("Division by zero is not allowed")
+            exit("Division by zero is not allowed")
         else:
             result = calculator.over(operating1, operating2)
 
