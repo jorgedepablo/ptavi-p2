@@ -11,10 +11,10 @@ class Calculadora():
         self.op2 = op2
 
     def plus(self):
-        return (self.op1 + self.op2)
+        return self.op1 + self.op2
 
     def minus(self):
-        return (self.op1 - self.op2)
+        return self.op1 - self.op2
 
 
 def operate(arg):
