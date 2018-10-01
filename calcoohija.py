@@ -14,7 +14,7 @@ class CalculadoraHija(Calculadora):
             return self.op1 / self.op2
         except ZeroDivisionError:
             exit("Division by zero is not allowed")
-
+            
     def operate(self, arg):
         if arg == "suma":
             result = self.plus()
