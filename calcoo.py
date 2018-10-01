@@ -37,6 +37,5 @@ if __name__ == "__main__":
         sys.exit("Error: Non numerical parameters")
 
     calculator = Calculadora(operating1, operating2)
-
     result = operate(arg)
     print(result)
