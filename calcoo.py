@@ -9,12 +9,13 @@ class Calculadora():
     def __init__(self, op1, op2):
         self.op1 = op1
         self.op2 = op2
-        
+
     def plus(self):
         return (self.op1 + self.op2)
 
     def minus(self):
         return (self.op1 - self.op2)
+
 
 def operate(arg):
 
@@ -25,6 +26,7 @@ def operate(arg):
     else:
         exit('Error: Only accept "suma" or "resta"')
     return (result)
+
 
 if __name__ == "__main__":
     try:
@@ -37,4 +39,4 @@ if __name__ == "__main__":
     calculator = Calculadora(operating1, operating2)
 
     result = operate(arg)
-    print (result)
+    print(result)
