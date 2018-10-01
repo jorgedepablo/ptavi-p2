@@ -4,6 +4,7 @@
 import sys
 from calcoo import Calculadora
 
+
 class CalculadoraHija(Calculadora):
 
     def times(self):
@@ -14,7 +15,7 @@ class CalculadoraHija(Calculadora):
             return self.op1 / self.op2
         except ZeroDivisionError:
             exit("Division by zero is not allowed")
-            
+
     def operate(self, arg):
         if arg == "suma":
             result = self.plus()
@@ -28,6 +29,7 @@ class CalculadoraHija(Calculadora):
             exit('Error: Only accept "suma","resta","multiplica" or "divide"')
         return (result)
 
+
 if __name__ == "__main__":
     try:
         operating1 = int(sys.argv[1])
@@ -38,4 +40,4 @@ if __name__ == "__main__":
 
     calculator = CalculadoraHija(operating1, operating2)
     result = calculator.operate(arg)
-    print (result)
+    print(result)
