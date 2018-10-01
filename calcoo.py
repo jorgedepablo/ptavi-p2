@@ -6,27 +6,35 @@ import sys
 
 class Calculadora():
 
-    def plus(self, op1, op2):
-        return op1 + op2
+    def __init__(self, op1, op2):
+        self.op1 = op1
+        self.op2 = op2
 
-    def minus(self, op1, op2):
-        return op1 - op2
+    def plus(self):
+        return (self.op1 + self.op2)
 
+    def minus(self):
+        return (self.op1 - self.op2)
 
-calculator = Calculadora()
+def operate(arg):
+
+    if arg == "suma":
+        result = calculator.plus()
+    elif arg == "resta":
+        result = calculator.minus()
+    else:
+        exit('Error: Only accept "suma" or "resta"')
+    return (result)
 
 if __name__ == "__main__":
     try:
         operating1 = int(sys.argv[1])
+        arg = sys.argv[2]
         operating2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
 
-    if sys.argv[2] == "suma":
-        result = calculator.plus(operating1, operating2)
-    elif sys.argv[2] == "resta":
-        result = calculator.minus(operating1, operating2)
-    else:
-        sys.exit('Operación solo puede ser sumar o restar.')
+    calculator = Calculadora(operating1, operating2)
 
-print(result)
+    result = operate(arg)
+    print (result)
