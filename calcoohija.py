@@ -26,7 +26,7 @@ class CalculadoraHija(Calculadora):
         elif arg == "divide":
             result = self.over()
         else:
-            exit('Error: Only accept "suma","resta","multiplica" or "divide"')
+            exit('Error: Only accept "suma","resta", "multiplica" or "divide"')
         return (result)
 
 
