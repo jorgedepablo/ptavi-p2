@@ -15,7 +15,6 @@ if __name__ == "__main__":
             for operands in operations[2:]:
                 calculator = calcoohija.CalculadoraHija(result, int(operands))
                 result = calculator.operate(arg)
-
             print (result)
     except ValueError:
         sys.exit("Error: The argument is not valid")
